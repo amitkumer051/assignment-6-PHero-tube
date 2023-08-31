@@ -20,22 +20,29 @@ const handleContent = async (categoryId) => {
     const data = await response.json();
     const contentData = data.data;
     console.log(contentData);
-    
+
     const cardContainer = document.getElementById('card-contaner')
-    cardContainer.innerHTML='';
-    
+    cardContainer.innerHTML = '';
+
     contentData.forEach(content => {
-    const div = document.createElement('div')
-    div.classList= `card card-compact  bg-base-100 shadow-xl`
-    div.innerHTML = `
-    <figure><img src="${content.thumbnail
-    }" alt="Shoes" /></figure>
+        const div = document.createElement('div')
+        div.classList = `card card-compact  bg-base-100 shadow-xl`
+        div.innerHTML = `
+        <figure><img src="${content?.thumbnail}" alt="" /></figure>
+        <div class="grid grid-cols-2 ">
+        <div>
+        <img class="w-10 h-auto rounded-full" src="${content?.authors[0].profile_picture}" alt="" />
+        </div>
+        <div class="">
                     <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title">${content?.title}</h2>
+                        <h2>${content?.authors[0]?.profile_name}</h2>
+                        <p>${content?.others?.views}</p>
                         <div class="card-actions justify-end">
                         </div>
                     </div>
+        </div>
+        </div>
     
     `
         cardContainer.appendChild(div);
