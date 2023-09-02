@@ -19,19 +19,18 @@ const handleContent = async (categoryId) => {
   const response = await fetch(`https://openapi.programming-hero.com/api/videos/category/${categoryId}`);
   const data = await response.json();
   const contentData = data.data;
-  console.log(contentData);
-
   const cardContainer = document.getElementById('card-contaner')
   cardContainer.innerHTML = '';
 
   const noContent = document.getElementById('no-content');
-  contentData.forEach(content => {
-    if (content.length === 0) {
+  
+
+    if (contentData.length === 0) {
       noContent.classList.remove('hidden');
     }
     else {
       noContent.classList.add('hidden');
-
+      contentData.forEach(content => {
       const div = document.createElement('div')
       const postData = content.others.posted_date;
       console.log(postData);
@@ -73,9 +72,10 @@ const handleContent = async (categoryId) => {
     `
       cardContainer.appendChild(div);
 
-    }
+    
 
   });
+}
 
 }
 const secondsToHours = (seconds) => {
@@ -92,6 +92,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const navButton = document.getElementById("nav-button");
   navButton.addEventListener("click", function() {
       window.location.href = "blog.html";
+  });
+});
+document.addEventListener('DOMContentLoaded', function() {
+  const navButton = document.getElementById("back-page");
+  navButton.addEventListener("click", function() {
+      window.location.href = "index.html";
   });
 });
 

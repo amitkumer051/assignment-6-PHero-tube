@@ -27,74 +27,94 @@
         }
 
         p {
-           padding-top: 10px; 
-           padding-bottom: 10px; 
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
     </style>
 </head>
 
-<body>
-    <section class="bg-neutral-400">
-        <div id="blog-button">
-            <h1 class="text-3xl text-center font-bold p-4">Question Answer</h1>
-            <hr>
-            <h2 class="question">Q1: Discuss the scope of var, let, and const</h2>
-            <div class="paragraph">
-                <p>Answer:</p>
-                <p>Var: The scope of a var variable is functional scope.It can be updated and re-declared into the
-                    scope.It can be declared without initialization.It can be accessed without initialization as its
-                    default value is undefined.hoisting done, with initializing as default value.</p>
-                <p>Let: The scope of a let variable is block scope.It can be updated but cannot be re-declared into the
-                    scope.It can be declared without initialization.It cannot be accessed without initialization
-                    otherwise it will give referenceError.</p>
+<body class="container mx-auto mb-5">
+    <div class="mockup-browser border bg-base-300">
+        <div class="mockup-browser-toolbar">
+            <div class="input">http://127.0.0.1:5500/blog.html</div>
+        </div>
+        <div class="flex justify-center px-4 py-4 bg-base-200">
+            <div id="blog-button">
+                <h1 class="text-3xl text-center font-bold p-4">Question Answer</h1>
+                <hr>
+                <h2 class="question">Q1: Discuss the scope of var, let, and const</h2>
+                <div class="paragraph">
+                    <p>Answer:</p>
+                    <p>Var: The scope of a var variable is functional scope.It can be updated and re-declared into the
+                        scope.It can be declared without initialization.It can be accessed without initialization as its
+                        default value is undefined.hoisting done, with initializing as default value.</p>
+                    <p>Let: The scope of a let variable is block scope.It can be updated but cannot be re-declared into
+                        the
+                        scope.It can be declared without initialization.It cannot be accessed without initialization
+                        otherwise it will give referenceError.</p>
 
-                <p>Const: The scope of a const variable is block scope.It cannot be updated or re-declared into the
-                    scope.It cannot be declared without initialization.It cannot be accessed without initialization, as
-                    it cannot be declared without initialization.Hoisting is done, but not initialized (this is the
-                    reason for the error when we access the const variable before declaration/initialization</p>
-            </div>
-
-            <h2 class="question">Q2: Tell us the use cases of null and undefined</h2>
-            <div class="paragraph">
-                <p>Answer:</p>
-                <p>Null: It is the intentional absence of the value. It is one of the primitive values of JavaScript.It
-                    is often assigned to variables, properties, or elements to indicate that they intentionally have no
-                    value or that they should be considered empty.Null is an intentional value set by the programmer to
-                    signify emptiness.
-                <div>
-                    Example: let myVariable = null;
-                    const person = {
-                    name: 'John',
-                    age: null,
-                    };
-                    Output:Null;
+                    <p>Const: The scope of a const variable is block scope.It cannot be updated or re-declared into the
+                        scope.It cannot be declared without initialization.It cannot be accessed without initialization,
+                        as
+                        it cannot be declared without initialization.Hoisting is done, but not initialized (this is the
+                        reason for the error when we access the const variable before declaration/initialization</p>
                 </div>
-                </p>
 
-                <p>Undefined: It means the value does not exist in the compiler. It is the global object.t is typically
-                    used when a variable has been declared but has not been assigned a value.It can also be used as an
-                    indicator for missing properties in objects or missing elements in arrays.
-                <div>
-                    Example: const person = {};
-                    console.log(person.age);
-                    Output:Undefined.
+                <h2 class="question">Q2: Tell us the use cases of null and undefined</h2>
+                <div class="paragraph">
+                    <p>Answer:</p>
+                    <p>Null: It is the intentional absence of the value. It is one of the primitive values of
+                        JavaScript.It
+                        is often assigned to variables, properties, or elements to indicate that they intentionally have
+                        no
+                        value or that they should be considered empty.Null is an intentional value set by the programmer
+                        to
+                        signify emptiness.
+                    <div>
+                        Example: let myVariable = null;
+                        const person = {
+                        name: 'John',
+                        age: null,
+                        };
+                        Output:Null;
+                    </div>
+                    </p>
+
+                    <p>Undefined: It means the value does not exist in the compiler. It is the global object.t is
+                        typically
+                        used when a variable has been declared but has not been assigned a value.It can also be used as
+                        an
+                        indicator for missing properties in objects or missing elements in arrays.
+                    <div>
+                        Example: const person = {};
+                        console.log(person.age);
+                        Output:Undefined.
+                    </div>
+                    </p>
                 </div>
-                </p>
-            </div>
 
-            <h2 class="question">Q3: What do you mean by REST API?</h2>
-            <p>Answer:</p>
-            <div class="paragraph"><p>An API, or application programming interface,is a set of rules that define how
-                applications or devices can connect to and communicate with each other. A REST API is an API that
-                conforms to the design principles of the REST, or representational state transfer architectural
-                style.REST API stands for Representational State Transfer Application Programming Interface. It is a set
-                of architectural principles and constraints for designing networked applications.REST is not a specific
-                technology but rather a style of designing networked applications that use the HTTP protocol for
-                communication.RESTful APIs are widely used for building web services and are known for their simplicity
-                and scalability.</p>
+                <div class="paragraph">
+                    <h2>Q3: What do you mean by REST API?</h2>
+                    <p>Answer:</p>
+                    <p>An API, or application programming interface,is a set of rules that define how
+                        applications or devices can connect to and communicate with each other. A REST API is an API
+                        that
+                        conforms to the design principles of the REST, or representational state transfer architectural
+                        style.REST API stands for Representational State Transfer Application Programming Interface. It
+                        is a set
+                        of architectural principles and constraints for designing networked applications.REST is not a
+                        specific
+                        technology but rather a style of designing networked applications that use the HTTP protocol for
+                        communication.RESTful APIs are widely used for building web services and are known for their
+                        simplicity
+                        and scalability.</p>
+                </div>
             </div>
         </div>
-    </section>
+        <div class="mx-auto justify-center text-center p-2 ">
+            <button id="back-page" class="btn btn-active btn-accent rounded-lg text-white">Back to main page</button>
+        </div>
+    </div>
 
     <script src="js/index.js"></script>
 </body>
