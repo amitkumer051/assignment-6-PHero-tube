@@ -7,7 +7,7 @@ const loadButton = async () => {
   tabData.forEach(element => {
     const div = document.createElement('div');
     div.innerHTML = `
-        <a onclick="handleContent('${element.category_id}')" class="tab bg-slate-200 hover:bg-red-600 hover:text-white my-6 mx-2 rounded-md">${element.category}</a>
+        <button onclick="handleContent('${element.category_id}')" class="tab bg-slate-200 focus:bg-red-600 focus:text-white my-6 mx-2 rounded-md">${element.category}</button>
         `
     console.log(element);
     tabContainer.appendChild(div)
